@@ -1,6 +1,8 @@
 #include "Animal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
+#include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
 #include <iostream>
 
 int main()
@@ -47,6 +49,26 @@ int main()
 	std::cout << Cat5.getType() << " " << std::endl;
 	Cat5.makeSound();
 
+	const WrongAnimal* WrongCat1 = new WrongCat();
+	const WrongAnimal* WrongCat2 = new WrongCat();
+	const WrongCat WrongCat3;
+	const WrongCat WrongCat4(WrongCat3);
+
+	WrongCat WrongCat5;
+
+	WrongCat5 = WrongCat3;
+
+	std::cout << WrongCat1->getType() << " " << std::endl;
+	WrongCat1->makeSound();
+	std::cout << WrongCat2->getType() << " " << std::endl;
+	WrongCat2->makeSound();
+	std::cout << WrongCat3.getType() << " " << std::endl;
+	WrongCat3.makeSound();
+	std::cout << WrongCat5.getType() << " " << std::endl;
+	WrongCat4.makeSound();
+	std::cout << WrongCat5.getType() << " " << std::endl;
+	WrongCat5.makeSound();
+
 	delete meta;
 
 	delete Dog1;
@@ -54,6 +76,9 @@ int main()
 
 	delete Cat1;
 	delete Cat2;
+
+	delete WrongCat1;
+	delete WrongCat2;
 
 	return 0;
 }

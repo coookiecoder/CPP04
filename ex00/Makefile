@@ -1,7 +1,7 @@
 CC=c++
 CFLAGS= -std=c++98 -Wall -Werror -Wextra
 
-OBJ=Animal.o Cat.o Dog.o main.o
+OBJ=Animal.o Cat.o Dog.o WrongAnimal.o WrongCat.o main.o
 NAME=Animal
 
 all: $(NAME)
