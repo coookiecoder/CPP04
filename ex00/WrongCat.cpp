@@ -18,7 +18,3 @@ WrongCat::WrongCat(void) : WrongAnimal::WrongAnimal("WrongCat") {
 WrongCat::~WrongCat(void) {
 	std::cout << "WrongCat deconstructor called" << std::endl;
 }
-
-void WrongCat::makeSound(void) const {
-	std::cout << "WrongCat made a sound ?" << std::endl;
-}

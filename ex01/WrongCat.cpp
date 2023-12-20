@@ -23,7 +23,3 @@ WrongCat::~WrongCat(void) {
 	std::cout << "WrongCat deconstructor called" << std::endl;
 	delete this->brain;
 }
-
-void WrongCat::makeSound(void) const {
-	std::cout << "WrongCat made a sound ?" << std::endl;
-}
