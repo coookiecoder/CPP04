@@ -16,6 +16,7 @@ int main() {
     }
 
     for (int i = 0; i < ARR_SIZE; ++i) {
+		animals[i]->makeSound();
         delete animals[i];
     }
 
